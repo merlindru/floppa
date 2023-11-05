@@ -13,13 +13,16 @@
 		/>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="root">{children}</div>
 
 		<script type="module" src="/src/main.ts"></script>
 
-		<template id="MyComponent">
-			<span class="text-red-500">{message}</span>
-			<div class="bg-blue-500">{slot}</div>
+		<template id="AmberText">
+			<div class="text-amber-400">{text}{children}</div>
+		</template>
+
+		<template id="BlueText">
+			<div class="text-blue-400">{text}{children}</div>
 		</template>
 	</body>
 </html>
